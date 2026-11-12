@@ -1,0 +1,15 @@
+# Job pipeline (DAG) with negative weights (e.g. time credits). Sources (in-degree 0): 0 and 1.
+# Expected super-source distances: [0, 0, 3, -2, 4, -1, 1], sum 5
+# Expected shortest path to 6: 1 -> 4 -> 6 ; to 5: 1 -> 3 -> 5
+# Expected critical (longest) path: 0 -> 3 -> 6 with length 11
+7 10 directed
+0 2 3
+0 3 6
+1 3 -2
+1 4 4
+2 3 -4
+2 5 2
+3 5 1
+3 6 5
+4 6 -3
+5 6 3
